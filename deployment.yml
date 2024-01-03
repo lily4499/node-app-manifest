@@ -23,7 +23,7 @@ spec:
     spec: # Pod spec
       containers:
       - name: node-app-container
-        image: laly9999/node-app-dockerized:2
+        image: laly9999/node-app-dockerized:3
         ports:
         - containerPort: 3000
         
