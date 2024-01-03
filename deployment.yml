@@ -23,7 +23,7 @@ spec:
     spec: # Pod spec
       containers:
       - name: node-app-container
-        image: laly9999/node-app-dockerized:3
+        image: laly9999/node-app-dockerized:latest
         ports:
         - containerPort: 3000
         
@@ -32,13 +32,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: amazon-service
+  name: node-service
   labels:
-    app: amazon-app
+    app: node-app
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 3000
   selector:
-    app: amazon-app
+    app: node-app
